@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qubit Academy | Dominate ICT with Sahan De Silva</title>
+  <meta name="description"
+    content="Stop memorizing. Start mastering. Premium A/L and O/L ICT classes by Sahan De Silva. Logic-first, future-ready, and zero fluff." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <span class="brand-name">Sahan De Silva</span>
+        <span class="brand-dot"> · </span>
+        <span class="brand-academy" data-i18n="nav_academy">Qubit Academy</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav_about">The Brains</a></li>
+        <li><a href="#courses" data-i18n="nav_courses">The Roadmap</a></li>
+        <li><a href="#why" data-i18n="nav_why">The Edge</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Secure Your Seat</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle" id="langToggle" aria-label="Language toggle">
+          <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="btnSI" onclick="setLang('si')">සිංහල</button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" data-i18n="nav_about" onclick="closeMobile()">The Brains</a></li>
+        <li><a href="#courses" data-i18n="nav_courses" onclick="closeMobile()">The Roadmap</a></li>
+        <li><a href="#why" data-i18n="nav_why" onclick="closeMobile()">The Edge</a></li>
+        <li><a href="#contact" data-i18n="nav_contact" onclick="closeMobile()">Secure Your Seat</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-text reveal-left">
+        <p class="hero-label" data-i18n="hero_label">Don't Just Study. Dominate.</p>
+        <h1 class="hero-title">Sahan De Silva</h1>
+        <h2 class="hero-academy">
+          <span class="academy-badge" data-i18n="hero_academy">Qubit Academy</span>
+        </h2>
+        <p class="hero-tagline" data-i18n="hero_tagline">"Crafting Minds. Building Futures."</p>
+
+        <p class="hero-intro" data-i18n="hero_intro">
+          Stop memorizing. Start mastering. <br />
+          Bringing modern ICT logic to A/L & O/L students who want to lead the future. 🚀
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero_btn_join">Start Your Grind</a>
+          <a href="#courses" class="btn btn-secondary" data-i18n="hero_btn_courses">Browse the Stack</a>
+        </div>
+      </div>
+
+      <div class="hero-image reveal-right">
+        <div class="image-glow"></div>
+        <div class="image-frame">
+          <img src="assets/mypic.jpeg" alt="Sahan De Silva — ICT Mentor" class="educator-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="educator-fallback" style="display:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="38" r="22" fill="#6D28D9" opacity="0.7" />
+              <ellipse cx="50" cy="82" rx="32" ry="18" fill="#6D28D9" opacity="0.5" />
+            </svg>
+            <span>Sahan De Silva</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <h2 class="section-title" data-i18n="about_title">The Mentor Behind the Code</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-badges reveal-left">
+          <div class="stat-card">
+            <span class="stat-number">5+</span>
+            <span class="stat-label" data-i18n="about_stat1_label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">200+</span>
+            <span class="stat-label" data-i18n="about_stat2_label">Students Unlocked</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">A/B</span>
+            <span class="stat-label" data-i18n="about_stat3_label">Top-Tier Results</span>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <p class="about-bio" data-i18n="about_bio">
+            ICT shouldn't be a struggle. I’m Sahan, and for 5+ years, I’ve been helping A/L and O/L students crush their
+            exams by making ICT actually make sense. At Qubit Academy, we cut the fluff. We focus on high-performance
+            logic, real-world coding, and exam strategies that actually work.
+          </p>
+          <ul class="about-highlights">
+            <li><span class="highlight-icon">◈</span> <span data-i18n="about_h1">CS Background (No fake gurus)</span>
+            </li>
+            <li><span class="highlight-icon">◈</span> <span data-i18n="about_h2">Logic over Rote Learning</span></li>
+            <li><span class="highlight-icon">◈</span> <span data-i18n="about_h3">Python Mastery & Algo Drills</span>
+            </li>
+            <li><span class="highlight-icon">◈</span> <span data-i18n="about_h4">Proven A-Pass Blueprint</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses section" id="courses">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <h2 class="section-title" data-i18n="courses_title">Choose Your Mission</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle" data-i18n="courses_subtitle">Zero fluff. Pure knowledge. Serious results.</p>
+      </div>
+
+      <div class="courses-grid">
+        <article class="course-card reveal-up">
+          <div class="card-top-border"></div>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6z" />
+              <polyline points="9 3 9 9 15 9" />
+            </svg>
+          </div>
+          <div class="card-badge" data-i18n="al_badge">Advanced Level</div>
+          <h3 class="card-title" data-i18n="al_title">A/L ICT Mastery</h3>
+          <p class="card-desc" data-i18n="al_desc">The ultimate deep-dive. We master the logic, crush the programming,
+            and dominate the papers.</p>
+          <ul class="card-features">
+            <li data-i18n="al_f1">100% Syllabus Coverage (No shortcuts)</li>
+            <li data-i18n="al_f2">Logic Building & Flowchart Pro-Tips</li>
+            <li data-i18n="al_f3">Hands-on Python (Real-world style)</li>
+            <li data-i18n="al_f4">Past Paper Speed-Run Practice</li>
+            <li data-i18n="al_f5">Exam-killer Theory Strategies</li>
+          </ul>
+          <a href="#contact" class="card-cta" data-i18n="card_cta">Enroll Now →</a>
+        </article>
+
+        <article class="course-card reveal-up" style="animation-delay: 0.15s;">
+          <div class="card-top-border"></div>
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </div>
+          <div class="card-badge" data-i18n="ol_badge">Ordinary Level</div>
+          <h3 class="card-title" data-i18n="ol_title">O/L ICT Foundation</h3>
+          <p class="card-desc" data-i18n="ol_desc">Build a bulletproof foundation. We turn O/L ICT into your easiest 'A'
+            while prepping you for the next level.</p>
+          <ul class="card-features">
+            <li data-i18n="ol_f1">Crystal clear theory sessions</li>
+            <li data-i18n="ol_f2">Practicals that actually click</li>
+            <li data-i18n="ol_f3">Result-oriented Exam Prep</li>
+            <li data-i18n="ol_f4">Modern Tech Tools & Insights</li>
+            <li data-i18n="ol_f5">Confidence that hits different</li>
+          </ul>
+          <a href="#contact" class="card-cta" data-i18n="card_cta">Enroll Now →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why section" id="why">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <h2 class="section-title" data-i18n="why_title">The Qubit Advantage</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle" data-i18n="why_subtitle">Why settle for 'normal' when you can have the edge?</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal-up">
+          <h3 data-i18n="why_h1">5+ Years of Proof</h3>
+          <p data-i18n="why_p1">A proven track record of turning average students into ICT toppers.</p>
+        </div>
+
+        <div class="why-card reveal-up" style="animation-delay:0.1s">
+          <h3 data-i18n="why_h2">Real Tech Roots</h3>
+          <p data-i18n="why_p2">Learn from someone who actually knows CS, not just someone reading a book.</p>
+        </div>
+
+        <div class="why-card reveal-up" style="animation-delay:0.2s">
+          <h3 data-i18n="why_h3">Modern Vibes Only</h3>
+          <p data-i18n="why_p3">Visual learning, coding drills, and real-world logic that makes sense.</p>
+        </div>
+
+        <div class="why-card reveal-up" style="animation-delay:0.3s">
+          <h3 data-i18n="why_h4">Personalized Support</h3>
+          <p data-i18n="why_p4">Small batches, big focus. We don't leave anyone behind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <h2 class="section-title" data-i18n="contact_title">Ready to Level Up?</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle" data-i18n="contact_subtitle">The best time to start was yesterday. The second best
+          time is now.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact_phone_label">Call / WhatsApp</span>
+            <a href="tel:+94753148557" class="contact-value">+94 75 314 8557</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact_email_label">Email</span>
+            <a href="mailto:sasfitness2992@gmail.com" class="contact-value">sasfitness2992@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contact_location_label">Based in</span>
+            <span class="contact-value">Sri Lanka (Island-wide Online)</span>
+          </div>
+        </div>
+
+        <div class="contact-actions reveal-right">
+          <p class="contact-cta-text" data-i18n="contact_cta_text">
+            Join the Qubit family today. Classes available island-wide for A/L and O/L legends.
+          </p>
+          <a href="https://wa.me/94753148557?text=Hi%20Sahan%2C%20I%27m%20ready%20to%20level%20up%20my%20ICT%20game!"
+            class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="contact_whatsapp">
+            Ping us on WhatsApp
+          </a>
+
+          <div class="schedule-placeholder">
+            <p class="schedule-title" data-i18n="schedule_title">📅 Class Schedule</p>
+            <p class="schedule-text" data-i18n="schedule_text">
+              New batches are forming! Reach out to grab your time slot.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-divider"></div>
+    <div class="container footer-content">
+      <p class="footer-copy">
+        © 2026 <strong>Sahan De Silva</strong> |
+        <span class="footer-academy">Qubit Academy</span>
+      </p>
+      <p class="footer-sub" data-i18n="footer_tagline">"Crafting Minds. Building Futures."</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
