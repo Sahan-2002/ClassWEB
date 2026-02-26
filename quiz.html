@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python MCQ Quiz | Qubit Academy</title>
+  <meta name="description" content="50 MCQ Python Programming Quiz for A/L ICT students by Sahan De Silva — Qubit Academy." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .quiz-page-nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 15, 26, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(59,130,246,0.3);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .quiz-nav-brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #F8FAFC;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .quiz-nav-brand span { color: #3b82f6; }
+
+    .quiz-nav-back {
+      font-size: 0.85rem;
+      color: #CBD5E1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .quiz-nav-back:hover { color: #D4AF37; }
+
+    /* Hero */
+    .quiz-hero {
+      padding: 100px 24px 48px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-main), var(--bg-card));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #3b82f6, #D4AF37);
+    }
+
+    .quiz-hero-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #3b82f6;
+      background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+
+    .quiz-hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #F8FAFC;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .quiz-hero-title span { color: #3b82f6; }
+
+    .quiz-hero-sub {
+      font-size: 1rem;
+      color: #CBD5E1;
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .quiz-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .quiz-stat {
+      text-align: center;
+    }
+
+    .quiz-stat-num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #3b82f6;
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .quiz-stat-label {
+      font-size: 0.78rem;
+      color: #64748B;
+      font-weight: 500;
+    }
+
+    /* Tips bar */
+    .quiz-tips {
+      background: rgba(59,130,246,0.07);
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: 12px;
+      padding: 16px 24px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .quiz-tip {
+      font-size: 0.85rem;
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Embed wrapper */
+    .quiz-embed-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .quiz-embed-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(59,130,246,0.1);
+      position: relative;
+    }
+
+    .quiz-embed-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #3b82f6, #D4AF37);
+      z-index: 1;
+    }
+
+    .quiz-embed-card iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+      display: block;
+    }
+
+    /* Fallback */
+    .quiz-fallback {
+      text-align: center;
+      padding: 48px 24px;
+      display: none;
+    }
+
+    .quiz-fallback p {
+      color: #CBD5E1;
+      margin-bottom: 20px;
+    }
+
+    /* Open button bar */
+    .quiz-open-bar {
+      text-align: center;
+      padding: 20px;
+      background: rgba(59,130,246,0.05);
+      border-top: 1px solid rgba(59,130,246,0.15);
+    }
+
+    .quiz-open-bar a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #64748B;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .quiz-open-bar a:hover { color: #3b82f6; }
+
+    /* CTA bottom */
+    .quiz-bottom-cta {
+      max-width: 700px;
+      margin: 48px auto 0;
+      background: linear-gradient(135deg, rgba(109,40,217,0.12), rgba(147,51,234,0.06));
+      border: 1px solid rgba(109,40,217,0.3);
+      border-radius: 18px;
+      padding: 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-bottom-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #D4AF37, #6D28D9, #D4AF37);
+    }
+
+    .quiz-bottom-cta h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-bottom: 10px;
+    }
+
+    .quiz-bottom-cta p {
+      color: #CBD5E1;
+      font-size: 0.93rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .quiz-embed-card iframe { height: 700px; }
+      .quiz-stats { gap: 20px; }
+      .quiz-tips { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="quiz-page-nav">
+    <a href="index.html" class="quiz-nav-brand">
+      Sahan De Silva · <span>Qubit Academy</span>
+    </a>
+    <a href="index.html#tuts" class="quiz-nav-back">← Back to Tuts</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="quiz-hero">
+    <div class="quiz-hero-badge">🐍 Python Programming Quiz</div>
+    <h1 class="quiz-hero-title">50 MCQ <span>Python</span> Challenge</h1>
+    <p class="quiz-hero-sub">Designed specifically for A/L ICT students by <strong>Sahan De Silva</strong>. Test your Python logic, master the syntax, and boost your exam confidence.</p>
+
+    <div class="quiz-stats">
+      <div class="quiz-stat">
+        <span class="quiz-stat-num">50</span>
+        <span class="quiz-stat-label">Questions</span>
+      </div>
+      <div class="quiz-stat">
+        <span class="quiz-stat-num">A/L</span>
+        <span class="quiz-stat-label">Exam Level</span>
+      </div>
+      <div class="quiz-stat">
+        <span class="quiz-stat-num">🆓</span>
+        <span class="quiz-stat-label">Free Access</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <div style="max-width:700px;margin:0 auto;padding:0 24px;">
+    <div class="quiz-tips">
+      <span class="quiz-tip">📧 Requires Google Sign-In to save progress</span>
+      <span class="quiz-tip">⏱️ Take your time — no time limit</span>
+      <span class="quiz-tip">🧠 Read each question carefully</span>
+      <span class="quiz-tip">📱 Works on mobile too</span>
+    </div>
+  </div>
+
+  <!-- Embedded Form -->
+  <div class="quiz-embed-wrapper">
+    <div class="quiz-embed-card">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfNYec2M8fgR2SFJe4wGOOot3R68NbgX_rnjAdkbkaDcYMgAg/viewform?embedded=true"
+        title="Python MCQ Quiz — Qubit Academy"
+        allow="clipboard-write"
+        loading="lazy">
+        Loading quiz…
+      </iframe>
+      <div class="quiz-open-bar">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNYec2M8fgR2SFJe4wGOOot3R68NbgX_rnjAdkbkaDcYMgAg/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+          ↗ Open in full screen (Google Forms)
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="quiz-bottom-cta">
+      <h3>Want to Go Deeper?</h3>
+      <p>This quiz is just a taste. Join Qubit Academy for live Python classes, detailed explanations, past paper walkthroughs, and Sahan's personal guidance for A/L ICT.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/94753148557?text=Hi%20Sahan%2C%20I%20completed%20the%20Python%20quiz%20and%20want%20to%20join%20Qubit%20Academy!" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          💬 Join via WhatsApp
+        </a>
+        <a href="index.html#tuts" class="btn btn-secondary">
+          ← Back to Lessons
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-divider"></div>
+    <div class="container footer-content">
+      <p class="footer-copy">© 2026 <strong>Sahan De Silva</strong> | <span class="footer-academy">Qubit Academy</span></p>
+      <p class="footer-sub">"Crafting Minds. Building Futures."</p>
+    </div>
+  </footer>
+
+</body>
+</html>

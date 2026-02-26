@@ -95,6 +95,11 @@ const translations = {
     syl_14: "Project",
     tuts_more_note: "More free lessons dropping regularly.",
     tuts_view_all: "View All Tuts →",
+    quiz_badge: "🐍 Python MCQ Quiz",
+    quiz_title: "Python Programming — 50 MCQ Challenge",
+    quiz_desc: "Think you know Python? Test yourself with 50 model MCQ questions designed specifically for A/L ICT students. Sharpen your logic and ace the exam.",
+    quiz_btn: "Start Quiz →",
+    quiz_embed_link: "View on this site ↗",
 
     /* CONTACT */
     contact_title: "Ready to Level Up?",
@@ -200,6 +205,11 @@ const translations = {
     syl_14: "ව්‍යාපෘතිය (Project)",
     tuts_more_note: "තවත් නොමිලේ පාඩම් ළඟදීම.",
     tuts_view_all: "සියලු පාඩම් බලන්න →",
+    quiz_badge: "🐍 Python MCQ ප්‍රශ්නාවලිය",
+    quiz_title: "Python Programming — MCQ ප්‍රශ්න 50ක් අභියෝගය",
+    quiz_desc: "Python ගැන දන්නවාද? A/L ICT සිසුන් සඳහා විශේෂයෙන් නිර්මාණය කළ MCQ ප්‍රශ්න 50කින් ඔබේ දැනුම පරීක්ෂා කරන්න.",
+    quiz_btn: "ප්‍රශ්නාවලිය පටන් ගන්න →",
+    quiz_embed_link: "මෙම සයිට් එකේ බලන්න ↗",
 
     /* CONTACT */
     contact_title: "පටන් ගමුද?",
