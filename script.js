@@ -2,7 +2,6 @@
  * ═══════════════════════════════════════════════════════════════
  * QUBIT ACADEMY — script.js
  * Sahan De Silva | Personal ICT Tuition Website
- * Refreshed for Gen Z & High-Performance Vibes
  * ═══════════════════════════════════════════════════════════════
  */
 
@@ -13,6 +12,7 @@ const translations = {
     nav_about: "The Brains",
     nav_courses: "The Roadmap",
     nav_why: "The Edge",
+    nav_tuts: "Tuts",
     nav_contact: "Secure Your Seat",
 
     /* HERO */
@@ -28,7 +28,7 @@ const translations = {
     about_stat1_label: "Years of Hustle",
     about_stat2_label: "Students Unlocked",
     about_stat3_label: "Tier-A Results",
-    about_bio: `ICT shouldn't be a struggle. I’m Sahan, and for 5+ years, I’ve been turning "confusing" concepts into "aha!" moments for A/L and O/L students. 
+    about_bio: `ICT shouldn't be a struggle. I'm Sahan, and for 5+ years, I've been turning "confusing" concepts into "aha!" moments for A/L and O/L students. 
                 At Qubit Academy, we cut the fluff. We build logic, solve real problems, and ensure you're exam-ready without the burnout. 
                 You're not just a number; we tailor the grind to fit your pace.`,
     about_h1: "CS Background (No fake gurus)",
@@ -69,6 +69,33 @@ const translations = {
     why_h4: "Personalized Support",
     why_p4: "Small batches, big focus. We don't leave anyone behind.",
 
+    /* TUTS & SYLLABUS */
+    tuts_title: "Free ICT Tuts",
+    tuts_subtitle: "High-value lessons, zero cost. Build real understanding before the exam.",
+    syllabus_label: "A/L ICT Syllabus",
+    syllabus_heading: "All 13 Lessons Covered",
+    syllabus_note: "Lesson 01 is free to download. More lessons dropping regularly.",
+    tut_btn_read: "Read →",
+    tut_btn_pdf: "PDF ↓",
+    syl_free_tag: "✦ Free",
+    syl_soon: "🔒 Soon",
+    syl_01: "Concept of ICT",
+    syl_02: "Introduction to Computer",
+    syl_03: "Data Representation",
+    syl_04: "Fundamentals of Digital Circuits",
+    syl_05: "Computer Operating Systems",
+    syl_06: "Data Communication and Networking",
+    syl_07: "System Analysis and Design",
+    syl_08: "Database Management",
+    syl_09: "Programming",
+    syl_10: "Web Development",
+    syl_11: "Internet of Things (IoT)",
+    syl_12: "ICT in Business",
+    syl_13: "New Trends and Future Directions of ICT",
+    syl_14: "Project",
+    tuts_more_note: "More free lessons dropping regularly.",
+    tuts_view_all: "View All Tuts →",
+
     /* CONTACT */
     contact_title: "Ready to Level Up?",
     contact_subtitle: "The best time to start was yesterday. The second best time is now.",
@@ -90,12 +117,13 @@ const translations = {
     nav_about: "මම කවුද?",
     nav_courses: "පාඨමාලා",
     nav_why: "විශේෂත්වය",
+    nav_tuts: "නිදහස් පාඩම්",
     nav_contact: "සම්බන්ධ වන්න",
 
     /* HERO */
     hero_label: "ICT ගේම් එක වෙනස් කරමු",
     hero_academy: "Qubit Academy",
-    hero_tagline: '"තාක්ෂණය ආරම්භ වන්නේ මෙතනින්"',
+    hero_tagline: '"හදන තැන හැදෙන තැන"',
     hero_intro: "කටපාඩම් කරන කාලය ඉවරයි. තර්කනයෙන් වැඩ පටන්ගමු. <br />අනාගතයට ගැළපෙන නවීන ICT දැනුමෙන් A/L සහ O/L සිසුන් සන්නද්ධ කරන තැන. 🚀",
     hero_btn_join: "අදම සම්බන්ධ වන්න",
     hero_btn_courses: "පාඨමාලා බලන්න",
@@ -146,6 +174,33 @@ const translations = {
     why_h4: "පෞද්ගලික අවධානය",
     why_p4: "සෑම සිසුවෙකුටම තමන්ගේ වේගයෙන් ඉගෙනගන්න පෞද්ගලික මගපෙන්වීම.",
 
+    /* TUTS & SYLLABUS */
+    tuts_title: "නොමිලේ ICT පාඩම්",
+    tuts_subtitle: "ඉහළ වටිනාකමැති පාඩම්, ශුන්‍ය වියදමකින්. විභාගයට පෙර සැබෑ අවබෝධය ගොඩනගන්න.",
+    syllabus_label: "A/L ICT විෂය නිර්දේශය",
+    syllabus_heading: "පාඩම් 13ක් ආවරණය කෙරේ",
+    syllabus_note: "පළමු පාඩම නොමිලේ download කළ හැකිය. තවත් පාඩම් ළඟදීම.",
+    tut_btn_read: "කියවන්න →",
+    tut_btn_pdf: "PDF ↓",
+    syl_free_tag: "✦ නොමිලේ",
+    syl_soon: "🔒 ළඟදී",
+    syl_01: "තොරතුරු හා සන්නිවේදන තාක්ෂණය පිළිබඳ සංකල්ප",
+    syl_02: "පරිගණකයට හැඳින්වීම",
+    syl_03: "දත්ත නිරූපණය",
+    syl_04: "අංකිත පරිපථවල මූලිකාංග",
+    syl_05: "පරිගණක මෙහෙයුම් පද්ධති",
+    syl_06: "දත්ත සන්නිවේදනය හා ජාලකරණය",
+    syl_07: "පද්ධති විශ්ලේෂණය හා නිර්මාණය",
+    syl_08: "දත්ත සමුදා කළමනාකරණය",
+    syl_09: "ක්‍රමලේඛනය (Programming)",
+    syl_10: "වෙබ් සංවර්ධනය",
+    syl_11: "අන්තර්ජාල දේවල් (Internet of Things - IoT)",
+    syl_12: "ව්‍යාපාර සඳහා ICT",
+    syl_13: "ICT හි නව ප්‍රවණතා සහ අනාගත දිශානති",
+    syl_14: "ව්‍යාපෘතිය (Project)",
+    tuts_more_note: "තවත් නොමිලේ පාඩම් ළඟදීම.",
+    tuts_view_all: "සියලු පාඩම් බලන්න →",
+
     /* CONTACT */
     contact_title: "පටන් ගමුද?",
     contact_subtitle: "සාර්ථකත්වයේ පළමු පියවර අදම තබන්න.",
@@ -158,7 +213,7 @@ const translations = {
     schedule_text: "අලුත් කණ්ඩායම් සඳහා වේලාවන් දැනගන්න දැන්ම අපව අමතන්න.",
 
     /* FOOTER */
-    footer_tagline: '"තාක්ෂණය ආරම්භ වන්නේ මෙතනින්"',
+    footer_tagline: '"හදන තැන හැදෙන තැන"',
   }
 };
 
@@ -183,7 +238,7 @@ function applyTranslations(lang) {
 
 function setLang(lang) {
   const currentLang = localStorage.getItem('qubit_lang');
-  if (lang === currentLang) return; // Don't reload if same language
+  if (lang === currentLang) return;
 
   const body = document.body;
   body.classList.add('lang-fade');
@@ -251,12 +306,11 @@ document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right')
   .forEach(el => revealObserver.observe(el));
 
 /* ─────────────────────────────────────
-    PARTICLES.JS — Direct Configuration
+    PARTICLES.JS
 ───────────────────────────────────── */
 function initParticles() {
   if (typeof particlesJS === 'undefined') return;
 
-  // Hardcoded config so you don't need a separate JSON file
   particlesJS('particles-js', {
     "particles": {
       "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
@@ -277,7 +331,7 @@ function initParticles() {
 }
 
 /* ─────────────────────────────────────
-    ACTIVE NAV LINK — highlight on scroll
+    ACTIVE NAV LINK
 ───────────────────────────────────── */
 const sections = document.querySelectorAll('section[id]');
 const navLinkElems = document.querySelectorAll('.nav-links a, .mobile-menu a');
@@ -301,7 +355,7 @@ function highlightNavLink() {
 window.addEventListener('scroll', highlightNavLink, { passive: true });
 
 /* ─────────────────────────────────────
-    INIT — on DOM ready
+    INIT
 ───────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('qubit_lang') || 'en';

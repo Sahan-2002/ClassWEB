@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qubit Academy | Free ICT Tutorials</title>
+    <meta name="description"
+        content="Free A/L &amp; O/L ICT lessons by Sahan De Silva. Master algorithms, data structures, and Python — zero cost, maximum value." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html#hero" class="nav-brand" aria-label="Home">
+                <span class="brand-name">Sahan De Silva</span>
+                <span class="brand-dot"> · </span>
+                <span class="brand-academy" data-i18n="nav_academy">Qubit Academy</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#about" data-i18n="nav_about">The Brains</a></li>
+                <li><a href="../index.html#courses" data-i18n="nav_courses">The Roadmap</a></li>
+                <li><a href="../index.html#why" data-i18n="nav_why">The Edge</a></li>
+                <li><a href="../index.html#tuts" data-i18n="nav_tuts" class="active-link">Tuts</a></li>
+                <li><a href="../index.html#contact" data-i18n="nav_contact">Secure Your Seat</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="lang-toggle" id="langToggle" aria-label="Language toggle">
+                    <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" id="btnSI" onclick="setLang('si')">සිංහල</button>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="../index.html#about" data-i18n="nav_about" onclick="closeMobile()">The Brains</a></li>
+                <li><a href="../index.html#courses" data-i18n="nav_courses" onclick="closeMobile()">The Roadmap</a></li>
+                <li><a href="../index.html#why" data-i18n="nav_why" onclick="closeMobile()">The Edge</a></li>
+                <li><a href="../index.html#tuts" data-i18n="nav_tuts" onclick="closeMobile()">Tuts</a></li>
+                <li><a href="../index.html#contact" data-i18n="nav_contact" onclick="closeMobile()">Secure Your Seat</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <div class="tuts-hero">
+        <div class="container">
+            <p class="hero-label" data-i18n="tuts_title">Free ICT Tuts</p>
+            <h1 class="section-title" style="font-size: clamp(2rem,5vw,3.2rem); margin-bottom:18px;">Qubit Academy</h1>
+            <div class="gold-divider"></div>
+            <p class="section-subtitle" style="margin-top:18px;" data-i18n="tuts_subtitle">
+                High-value lessons, zero cost. Build real understanding before the exam.
+            </p>
+        </div>
+    </div>
+
+    <!-- ── ALL TUTORIALS ── -->
+    <section class="tuts section" style="padding-top:60px;">
+        <div class="container">
+
+            <div class="tuts-grid">
+
+                <!-- Lesson 01 — LIVE -->
+                <article class="tut-card reveal-up">
+                    <div class="card-top-border"></div>
+                    <div class="tut-badge" data-i18n="tut1_badge">A/L ICT · Free</div>
+                    <h2 class="tut-title" data-i18n="tut1_title">Developing Algorithms</h2>
+                    <p class="tut-desc" data-i18n="tut1_desc">
+                        Master the logic behind flowcharts, pseudocode, and Python. Essential groundwork for every A/L
+                        ICT student.
+                    </p>
+                    <div class="tut-btn-row">
+                        <a href="lesson-01.html" class="btn btn-primary" data-i18n="tut_btn_read">Read Lesson →</a>
+                        <a href="../assets/pdfs/lesson1.pdf" class="btn btn-pdf" download
+                            data-i18n="tut_btn_pdf">Download PDF</a>
+                    </div>
+                </article>
+
+                <!-- Coming Soon — 02 -->
+                <article class="tut-card tut-card--soon reveal-up" style="animation-delay:0.15s">
+                    <div class="card-top-border"></div>
+                    <div class="tut-badge">Coming Soon</div>
+                    <h2 class="tut-title">Data Representation &amp; Number Systems</h2>
+                    <p class="tut-desc">Binary, Hex, BCD — decoded with logic and practice. Stay tuned for this next
+                        free lesson.</p>
+                    <div class="tut-btn-row"><span class="tut-soon-tag">🔒 Releasing Soon</span></div>
+                </article>
+
+                <!-- Coming Soon — 03 -->
+                <article class="tut-card tut-card--soon reveal-up" style="animation-delay:0.3s">
+                    <div class="card-top-border"></div>
+                    <div class="tut-badge">Coming Soon</div>
+                    <h2 class="tut-title">Database Design &amp; SQL Basics</h2>
+                    <p class="tut-desc">ERDs, normalisation, and real queries explained from the ground up. Practical
+                        and exam-ready.</p>
+                    <div class="tut-btn-row"><span class="tut-soon-tag">🔒 Releasing Soon</span></div>
+                </article>
+
+                <!-- Coming Soon — 04 -->
+                <article class="tut-card tut-card--soon reveal-up" style="animation-delay:0.45s">
+                    <div class="card-top-border"></div>
+                    <div class="tut-badge">Coming Soon</div>
+                    <h2 class="tut-title">Networking Fundamentals</h2>
+                    <p class="tut-desc">OSI model, IP addressing, and protocols demystified for A/L ICT exams.</p>
+                    <div class="tut-btn-row"><span class="tut-soon-tag">🔒 Releasing Soon</span></div>
+                </article>
+
+                <!-- Coming Soon — 05 -->
+                <article class="tut-card tut-card--soon reveal-up" style="animation-delay:0.6s">
+                    <div class="card-top-border"></div>
+                    <div class="tut-badge">Coming Soon</div>
+                    <h2 class="tut-title">Object-Oriented Programming</h2>
+                    <p class="tut-desc">Classes, objects, encapsulation, and polymorphism — OOP concepts written for ICT
+                        success.</p>
+                    <div class="tut-btn-row"><span class="tut-soon-tag">🔒 Releasing Soon</span></div>
+                </article>
+
+                <!-- Coming Soon — 06 -->
+                <article class="tut-card tut-card--soon reveal-up" style="animation-delay:0.75s">
+                    <div class="card-top-border"></div>
+                    <div class="tut-badge">Coming Soon</div>
+                    <h2 class="tut-title">System Development Life Cycle (SDLC)</h2>
+                    <p class="tut-desc">Waterfall, Agile, and SDLC phases — every stage covered with real-world context.
+                    </p>
+                    <div class="tut-btn-row"><span class="tut-soon-tag">🔒 Releasing Soon</span></div>
+                </article>
+
+            </div><!-- /tuts-grid -->
+
+            <!-- WhatsApp CTA -->
+            <div class="lesson-cta reveal-up">
+                <h2>Want the Complete Pack?</h2>
+                <p>Get access to all theory notes, 100+ MCQs, model answers, and past paper discussions — structured and
+                    exam-ready.</p>
+                <ul>
+                    <li>Complete Theory Notes</li>
+                    <li>100+ MCQ Bank</li>
+                    <li>Model Answers</li>
+                    <li>Past Paper Discussions</li>
+                </ul>
+                <div class="cta-btn-row">
+                    <a href="https://wa.me/94753148557?text=Hi%20Sahan%2C%20I%20want%20the%20full%20A/L%20ICT%20pack"
+                        class="btn-wa" target="_blank" rel="noopener noreferrer">
+                        💬 Message on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <div class="container footer-content">
+            <p class="footer-copy">
+                © 2026 <strong>Sahan De Silva</strong> |
+                <span class="footer-academy">Qubit Academy</span>
+            </p>
+            <p class="footer-sub" data-i18n="footer_tagline">"Crafting Minds. Building Futures."</p>
+        </div>
+    </footer>
+
+    <script>
+        /* ── Translations (subset) ── */
+        const translations = {
+            en: {
+                nav_academy: "Qubit Academy",
+                nav_about: "The Brains",
+                nav_courses: "The Roadmap",
+                nav_why: "The Edge",
+                nav_tuts: "Tuts",
+                nav_contact: "Secure Your Seat",
+                tuts_title: "Free ICT Tuts",
+                tuts_subtitle: "High-value lessons, zero cost. Build real understanding before the exam.",
+                tut1_badge: "A/L ICT · Free",
+                tut1_title: "Developing Algorithms",
+                tut1_desc: "Master the logic behind flowcharts, pseudocode, and Python. Essential groundwork for every A/L ICT student.",
+                tut_btn_read: "Read Lesson →",
+                tut_btn_pdf: "Download PDF",
+                footer_tagline: '"Crafting Minds. Building Futures."',
+            },
+            si: {
+                nav_academy: "Qubit Academy",
+                nav_about: "මම කවුද?",
+                nav_courses: "පාඨමාලා",
+                nav_why: "විශේෂත්වය",
+                nav_tuts: "නිදහස් පාඩම්",
+                nav_contact: "සම්බන්ධ වන්න",
+                tuts_title: "නොමිලේ ICT පාඩම්",
+                tuts_subtitle: "ඉහළ වටිනාකමැති පාඩම්, ශුන්‍ය වියදමකින්. විභාගයට පෙර සැබෑ අවබෝධය ගොඩනගන්න.",
+                tut1_badge: "A/L ICT · නොමිලේ",
+                tut1_title: "Algorithms වර්ධනය",
+                tut1_desc: "Flowcharts, Pseudocode, සහ Python පිළිබඳ logic ප්‍රගුණ කරන්න. සෑම A/L ICT සිසුවෙකුටම අත්‍යවශ්‍ය පදනම.",
+                tut_btn_read: "පාඩම කියවන්න →",
+                tut_btn_pdf: "PDF බාගන්න",
+                footer_tagline: '"හදන තැන හැදෙන තැන"',
+            }
+        };
+
+        function applyTranslations(lang) {
+            const t = translations[lang];
+            if (!t) return;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.innerHTML = t[key];
+            });
+            document.documentElement.lang = lang === 'si' ? 'si' : 'en';
+            document.body.classList.toggle('lang-si', lang === 'si');
+        }
+
+        function setLang(lang) {
+            const current = localStorage.getItem('qubit_lang');
+            if (lang === current) return;
+            document.body.classList.add('lang-fade');
+            setTimeout(() => {
+                applyTranslations(lang);
+                localStorage.setItem('qubit_lang', lang);
+                document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+                document.getElementById('btnSI').classList.toggle('active', lang === 'si');
+                document.body.classList.remove('lang-fade');
+            }, 250);
+        }
+
+        /* ── Navbar scroll ── */
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        /* ── Hamburger ── */
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            hamburger.setAttribute('aria-expanded', open.toString());
+        });
+        function closeMobile() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+
+        /* ── Scroll reveal ── */
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
+
+        /* ── Init ── */
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('qubit_lang') || 'en';
+            applyTranslations(saved);
+            document.getElementById('btnEN').classList.toggle('active', saved === 'en');
+            document.getElementById('btnSI').classList.toggle('active', saved === 'si');
+        });
+    </script>
+</body>
+
+</html>
