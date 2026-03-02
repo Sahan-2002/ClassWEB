@@ -228,6 +228,32 @@ const translations = {
 };
 
 /* ─────────────────────────────────────
+    THEME TOGGLE — Dark / Light
+───────────────────────────────────── */
+const themeToggle = document.getElementById('themeToggle');
+
+function applyTheme(theme) {
+  const isLight = theme === 'light';
+  if (isLight) {
+    document.body.classList.add('light-mode');
+  } else {
+    document.body.classList.remove('light-mode');
+  }
+  updateParticlesForTheme(isLight);
+}
+
+function toggleTheme() {
+  const isLight = document.body.classList.contains('light-mode');
+  const newTheme = isLight ? 'dark' : 'light';
+  applyTheme(newTheme);
+  localStorage.setItem('qubit_theme', newTheme);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', toggleTheme);
+}
+
+/* ─────────────────────────────────────
     LANGUAGE SYSTEM
 ───────────────────────────────────── */
 
@@ -340,6 +366,19 @@ function initParticles() {
   });
 }
 
+// Re-tint particles canvas when theme switches
+function updateParticlesForTheme(isLight) {
+  const canvas = document.querySelector('#particles-js canvas');
+  if (!canvas) return;
+  if (isLight) {
+    canvas.style.opacity = '0.6';
+    canvas.style.filter = 'saturate(1.6) brightness(0.55)';
+  } else {
+    canvas.style.opacity = '1';
+    canvas.style.filter = 'none';
+  }
+}
+
 /* ─────────────────────────────────────
     ACTIVE NAV LINK
 ───────────────────────────────────── */
@@ -374,7 +413,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnEN').classList.toggle('active', savedLang === 'en');
   document.getElementById('btnSI').classList.toggle('active', savedLang === 'si');
 
+  // Load saved theme
+  const savedTheme = localStorage.getItem('qubit_theme') || 'dark';
+  applyTheme(savedTheme);
+
   initParticles();
+  // Apply particle tint after init (slight delay for canvas to render)
+  setTimeout(() => updateParticlesForTheme(savedTheme === 'light'), 300);
+
   handleNavScroll();
   highlightNavLink();
 });

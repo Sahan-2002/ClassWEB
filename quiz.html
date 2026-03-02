@@ -267,8 +267,26 @@
     <a href="index.html" class="quiz-nav-brand">
       Sahan De Silva · <span>Qubit Academy</span>
     </a>
-    <a href="index.html#tuts" class="quiz-nav-back">← Back to Tuts</a>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button id="themeToggleQuiz" aria-label="Toggle dark/light mode" style="width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(109,40,217,0.3);background:rgba(109,40,217,0.1);cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all 0.3s;" onmouseover="this.style.borderColor='#D4AF37'" onmouseout="this.style.borderColor='rgba(109,40,217,0.3)'">
+        <span id="themeIconQuiz">🌙</span>
+      </button>
+      <a href="index.html#tuts" class="quiz-nav-back">← Back to Tuts</a>
+    </div>
   </nav>
+
+  <script>
+    const savedThemeQ = localStorage.getItem('qubit_theme') || 'dark';
+    if (savedThemeQ === 'light') {
+      document.body.classList.add('light-mode');
+      document.getElementById('themeIconQuiz').textContent = '☀️';
+    }
+    document.getElementById('themeToggleQuiz').addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      document.getElementById('themeIconQuiz').textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('qubit_theme', isLight ? 'light' : 'dark');
+    });
+  </script>
 
   <!-- Hero -->
   <section class="quiz-hero">
